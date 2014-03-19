@@ -61,6 +61,7 @@ grails.project.dependency.resolution = {
         compile ":scaffolding:2.0.1"
         compile ':cache:1.1.1'
 		compile ':spring-security-core:2.0-RC2'
+		compile ":grails-direct-messages:1.0" // messaging system
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.7" // or ":hibernate4:4.1.11.6"

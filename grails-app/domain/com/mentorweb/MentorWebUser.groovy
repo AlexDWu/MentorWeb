@@ -13,8 +13,11 @@ class MentorWebUser extends User{
 		menteeRequests: MentorWebUser, // Requests for this user as a mentee
 		
 		// Pending requests
-		pendingMentors: MentorWebUser, // This user's requests for mentors
-		pendingMentees: MentorWebUser, // This user's requests for mentees
+		unconfirmedMentors: MentorWebUser, // This user's requests for mentors
+		unconfirmedMentees: MentorWebUser, // This user's requests for mentees
+		
+		// Skills
+		skills: Skill, //User's skills
 	]
 	
 	static mappedBy = [ // for clearing up reverse lookup ambiguity
@@ -22,10 +25,10 @@ class MentorWebUser extends User{
 		mentees:"mentors",
 		
 		mentorRequests:"pendingMentors",
-		pendingMentors:"mentorRequests",
+		unconfirmedMentors:"mentorRequests",
 		
 		menteeRequests:"pendingMentees",
-		pendingMentees:"menteeRequests",
+		unconfirmedMentees:"menteeRequests",
 	]
 	
     static constraints = {
